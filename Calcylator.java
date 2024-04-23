@@ -19,6 +19,9 @@ public class Calcylator {
             }
             String[] number = exp.split(split[singsave]);
             if (convert.Roman(number[0])==convert.Roman(number[1])){
+                 if(number.length>2){
+                    throw new Exception("Вы ввели больше двух чисел");
+                }
              int a,b;
              boolean isRoman=convert.Roman(number[0]);
              if(isRoman){
@@ -27,7 +30,10 @@ public class Calcylator {
              }else {
                  a=Integer.valueOf(number[0]);
                  b=Integer.valueOf(number[1]);
-             } int rezylt=0;
+             }if(a>10||b>10){
+                    throw new Exception("Некорректное выражение");
+                }
+                int rezylt=0;
              switch (sing[singsave]){
                  case "+":
               rezylt = a+b;
