@@ -16,6 +16,8 @@ public class Convert {
         room.put("IX",9);
         room.put("X",10);
 
+        rooman.put(100,"C");
+        rooman.put(50,"L");
         rooman.put(10,"X");
         rooman.put(9,"IX");
         rooman.put(8,"VIII");
